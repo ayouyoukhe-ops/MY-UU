@@ -1,0 +1,48 @@
+:root {
+    --bg: #ffffff; --text: #1a1a1a; --card: #f8f9fa; --primary: #2563eb;
+}
+.dark-theme {
+    --bg: #0f172a; --text: #f8fafc; --card: #1e293b; --primary: #38bdf8;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Arial', sans-serif; }
+body { background: var(--bg); color: var(--text); transition: 0.4s; line-height: 1.6; }
+.hidden { display: none !important; }
+
+/* شاشة الدخول */
+#login-screen { position: fixed; inset: 0; background: var(--bg); display: flex; justify-content: center; align-items: center; z-index: 1000; }
+.login-box { padding: 2rem; background: var(--card); border-radius: 15px; text-align: center; width: 90%; max-width: 400px; border: 1px solid var(--primary); }
+input { width: 100%; margin: 10px 0; padding: 12px; border-radius: 8px; border: 1px solid #ccc; }
+
+/* الهيدر والملاحة */
+header { padding: 1rem 5%; background: var(--card); position: sticky; top: 0; z-index: 100; }
+nav { display: flex; justify-content: space-between; align-items: center; }
+
+/* الأقسام */
+#hero { padding: 80px 20px; text-align: center; }
+.skills-icons { margin-top: 15px; color: var(--primary); font-weight: bold; }
+
+.tabs { display: flex; justify-content: center; gap: 10px; margin: 30px 0; flex-wrap: wrap; }
+.tab-btn { padding: 10px 20px; border-radius: 20px; border: 2px solid var(--primary); background: none; color: var(--text); cursor: pointer; transition: 0.3s; }
+.tab-btn.active { background: var(--primary); color: #fff; }
+
+.tab-content { display: none; animation: fadeIn 0.5s; }
+.tab-content.active { display: block; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; padding: 20px; }
+.card { background: var(--card); padding: 25px; border-radius: 15px; text-align: center; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+
+/* التجاوب مع الأجهزة (الهاتف والأيباد) */
+@media (max-width: 768px) {
+    #hero h1 { font-size: 1.8rem; }
+    .tabs { gap: 5px; }
+    .tab-btn { padding: 8px 12px; font-size: 0.8rem; }
+}
+
+/* حركات */
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+.floating { animation: float 3s infinite ease-in-out; }
+@keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+.bounce:hover { transform: scale(1.05); transition: 0.3s; }
+
+footer { padding: 50px; text-align: center; background: var(--card); }
+.email-btn { text-decoration: none; color: var(--primary); font-weight: bold; font-size: 1.2rem; }
