@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayoub | معرض أعمالي</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="login-screen">
+        <div class="login-box floating">
+            <h2>مرحباً بك</h2>
+            <p>أدخل بياناتك لمشاهدة أعمال أيوب</p>
+            <form id="login-form">
+                <input type="email" placeholder="البريد الإلكتروني" required>
+                <input type="password" placeholder="كلمة المرور" required>
+                <button type="submit" class="btn primary-btn">دخول</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="main-content" class="hidden">
+        <header>
+            <nav>
+                <div class="logo">🚀 <span id="nav-name">Ayoub cv</span></div>
+                <div class="controls">
+                    <button id="theme-toggle" class="btn theme-btn">🌙</button>
+                    <select id="lang-switch" class="btn">
+                        <option value="ar">العربية</option>
+                        <option value="en">English</option>
+                        <option value="fr">Français</option>
+                    </select>
+                </div>
+            </nav>
+        </header>
+
+        <section id="hero">
+            <div class="hero-content">
+                <h1 id="hero-title" class="slide-in">أنا أيوب، مبدع في البرمجة والتصميم</h1>
+                <p id="hero-desc">خبير في Scratch و PictoBlox، ومحترف في Word, Excel, PowerPoint.</p>
+                <div class="skills-icons">
+                    <span>📊 Excel</span> <span>📝 Word</span> <span>🖼️ PPT</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="container">
+            <h2 id="projects-title">أبرز أعمالي</h2>
+            <div class="tabs">
+                <button class="tab-btn active" onclick="openTab('scratch')">SCRATCH</button>
+                <button class="tab-btn" onclick="openTab('pictoblox')">PICTOBLOX</button>
+                <button class="tab-btn" onclick="openTab('websites')">المواقع</button>
+                <button class="tab-btn" onclick="openTab('canva')">CANVA</button>
+            </div>
+
+            <div id="scratch" class="tab-content active">
+                <div class="grid">
+                    <div class="card bounce"><h3>ألعاب Scratch</h3><p>مشاريع برمجية تفاعلية.</p></div>
+                </div>
+            </div>
+            <div id="pictoblox" class="tab-content">
+                <div class="grid">
+                    <div class="card bounce"><h3>الذكاء الاصطناعي</h3><p>برمجة PictoBlox.</p></div>
+                </div>
+            </div>
+            <div id="websites" class="tab-content">
+                <div class="grid">
+                    <div class="card bounce"><h3>مواقع ويب</h3><p>تصميم واجهات حديثة.</p></div>
+                </div>
+            </div>
+            <div id="canva" class="tab-content">
+                <div class="grid">
+                    <div class="card bounce"><h3>تصاميم Canva</h3><p>أغلفة مجلات إبداعية.</p></div>
+                </div>
+            </div>
+        </section>
+
+        <footer id="contact">
+            <h2 id="contact-title">تواصل معي</h2>
+            <a href="mailto:ayouyoukhe@gmail.com" class="email-btn">ayouyoukhe@gmail.com</a>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
